@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src = "js/jquery.js"></script>
+        <link href="bootstrap3/css/bootstrap.min.css"  rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style.css"> 
+        
+    </head>
+    <body>
+        <div class="header">
+            <table>
+                <thead id="table">
+                    <th><h1>Simple Quiz Game</h1></th>
+                    <th><img src="avatar.png" class="avatar"></th>
+                    <th id="th"></th>
+                </thead>
+            </table>
+        </div>
+        
+
+        <div class="Add_Question">
+            <h1>Add Question</h1>
+            <form id="form" >
+                <p>Question</p>
+                <input type="text" class="input" id = "Question" placeholder="Question" required>
+                <table>
+                    <thead class="thead">
+                   <th> <p>First Option</p>
+                    <input type="text"  id = "FirstOption" placeholder="First Option" required></th>
+                   <th> <p>Second Option</p>
+                    <input type="text"  id = "SecondOption" placeholder="Second Option" required></th>
+                    <th><p>Third Option</p>
+                    <input type="text" id = "ThirdOption" placeholder="Third Option" required></th>
+                    <th><p>Fourth Option</p>
+                    <input type="text" id = "FourthOption" placeholder="Fourth Option" required></th>
+                    <th><p>Correct Answer</p>
+                    <input type="text" id = "CorrectAnswer" placeholder="Correct Answer" required></th>
+                    <th><button type="button" class="btn btn-info" id="addQuestion">Add Question</button></th>
+                    </thead>
+                </table>
+            </form>
+        </div>
+        <div class="questions" id="questions">
+        </div>
+        <!-- <div class="dropdown container">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Options
+            <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a href="#">View Specific Questions</a></li>
+                <li><a href="#">Add Questions</a></li>
+            </ul>
+        </div> --> 
+    </body>
+    <script src = "js/Home.js"></script>
+</html>

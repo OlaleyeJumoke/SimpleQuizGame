@@ -1,0 +1,243 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: rgb(137, 181, 206);
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+}
+.Add{
+    margin: 0;
+    padding: 0;
+    background: rgb(75, 235, 235);
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+}
+.header{
+    width: 100%;
+    height: 80px;
+    background-color: rgb(2, 62, 129) ;
+}
+.header h1{
+    font-size: 30px;
+    color: #fff;
+   text-align: start;
+   padding: 20px 0px 20px 40px;
+}
+ input[type="submit"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #d4af37/*#1c8adb*/;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+	margin-top: 20px;
+}
+ input[type="submit"]:hover
+{
+    cursor: pointer;
+    background: #39dc79;
+    color: #000;
+}
+ a{
+    text-decoration: none;
+    font-size: 14px;
+    color: #fff;
+}
+ a:hover{
+    color: #39dc79;
+}
+input{
+    /* margin-bottom: 20px; */
+	border: 2px solid #d4af37;
+}
+input[type="text"], input[type="password"]
+{
+    width: 100%;
+    border:2px solid #d4af37;
+	border-radius:10px;
+	padding-left:8px;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+.input[type="radio"]{
+	border-radius:10px;
+	padding-left:8px;
+    background: transparent;
+    outline: none;
+    height: 50px;
+    /* text-align: start; */
+    color: rgb(8, 8, 8);
+    font-size: 16px;
+}
+.thead th{
+   padding: 20px;
+}
+.Login-Box{
+    width: 420px;
+    height: 520px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+h1{
+    margin: 0;
+    padding: 0 0 10px;
+    text-align: center;
+    font-size: 22px;
+}
+p{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+.options{
+    margin: 20px;
+    padding: 0;
+    font-size: 18px;
+    display: block;
+}
+.questions{
+    float: left;
+
+}
+.avatar{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    /* position: absolute; */
+    top: -50px;
+    left: calc(50% - 50px);
+    align-self: flex-end;
+}
+
+ 
+/*registration first page*/
+.Register_First{
+	width: 420px;
+    height: 520px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 50px 30px;
+}
+.Second{
+    width: 520px;
+    height: 300px;
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: relative;
+    /* transform: translate(-50%,-50%);  */
+    box-sizing: border-box;
+    padding: 50px 30px;
+}
+.Add_Question{
+    width: 100%;
+    height: 220px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    /* top: 50%;
+    left: 50%; */
+    /*position: absolute;
+     transform: translate(-50%,-50%); */
+    box-sizing: border-box;
+    padding: 20px 30px;
+}
+.Add_Question h1{
+    padding: 0px;
+}
+.forgetPW{
+    color: #fff;
+	position:absolute;
+	left: calc(50% - 50px);
+}
+
+.signIn{
+    color: #fff;
+	position:absolute;
+	left: 45%/*calc(50% - 50px)*/;
+}
+.UploadLogo{
+	color: #FFF;
+	background: #069;
+	border: 2px #069 solid;
+	border-radius:5px;
+	}
+
+
+
+	
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

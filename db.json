@@ -1,0 +1,53 @@
+{
+  "Questions": [
+    {
+      "id": 1,
+      "question": "what happened in Fuoye?",
+      "firstOption": "a",
+      "secondOption": "b",
+      "thirdOption": "c",
+      "fourthOption": "d",
+      "correctAnswer": "b",
+      "categories": "Power"
+    },
+    {
+      "question": "Is this for real?",
+      "firstOption": "yes",
+      "secondOption": "yes",
+      "thirdOption": "yest",
+      "fourthOption": "nost",
+      "correctAnswer": "yest",
+      "id": 2
+    }
+  ],
+  "Users": [
+    {
+      "id": 1,
+      "name": "Jumoke",
+      "email": "olaleyesilver@gmail.com",
+      "password": "jumoke123",
+      "score": [
+        23
+      ]
+    },
+    {
+      "name": "Bella",
+      "email": "bella@gmail.com",
+      "password": "bella",
+      "id": 2
+    },
+    {
+      "name": "Tolani",
+      "email": "tolani@gmail.com",
+      "password": "tolani",
+      "id": 3
+    },
+    {
+      "name": "Dolapo",
+      "email": "dolapo@gmail.com",
+      "password": "dolapo",
+      "score": "[]",
+      "id": 4
+    }
+  ]
+}
