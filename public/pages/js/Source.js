@@ -6,43 +6,62 @@ $('#signUp').click((e)=>{
     let password = $('#Password').val();
     let score = "[]";
     alert(name);
-    $.ajax({
-        url: 'http://localhost:3000/Users',
-        method:'post',
-        data: {
-            name, email, password, score
-        }       
-    }).done((e)=>{alert("Success");
-    localStorage.setItem("name", name);
-    localStorage.getItem("name");
-    window.location.replace("/pages/Home.html");
-});
-    $('#Name').val('');
-    $('#Email').val('');
-    $('#Password').val('');
+    if(name.length > 0 && email.length > 0 && password.length > 0){
+        $.ajax({
+            url: 'http://localhost:3000/Users',
+            method: 'get',
+        }).done((e)=>{
+            for(let j = 0; j < e.length; j++){
+                if(e[j].email == email){
+                    break;
+                    alert("user already exist with ${e[j].email}");
+                    window.location.replace("./pages/Register.html");
+                }
+                else{
+                    $.ajax({
+                        url: 'http://localhost:3000/Users',
+                        method:'post',
+                        data: {
+                            name, email, password, score
+                        }       
+                    }).done((e)=>{alert("Success");
+                    localStorage.setItem("name", name);
+                    //localStorage.getItem("name");
+                    window.location.replace("./pages/Home.html");
+                    });
+                    $('#Name').val('');
+                    $('#Email').val('');
+                    $('#Password').val('');
+                }
+            }
+        })
+    }    
 });
 
 $('#loginBtn').click((e)=>{
     e.preventDefault();
     let email = $('#Email').val();
     let password = $('#Password').val();
-    $.ajax({
-        url: 'http://localhost:3000/Users',
-        method:'get',     
-    }).done((e)=>{alert("Success");
-    for(let i = 0; i < e.length; i++){
-        if(email == e[i].email && password == e[i].password){
-            alert(e[i]);
-            localStorage.setItem("name", e[i].name);
-            window.location.replace("./pages/Home.html");
+    if(email.length > 0 && password.length > 0){
+        $.ajax({
+            url: 'http://localhost:3000/Users',
+            method:'get',     
+        }).done((e)=>{alert("Success");
+        for(let i = 0; i < e.length; i++){
+            if(email == e[i].email && password == e[i].password){
+                alert(e[i]);
+                localStorage.setItem("name", e[i].name);
+                window.location.replace("./pages/Home.html");
+            }
+            else{
+                alert('Invalid Login details');
+                window.location.replace("./pages/index.html");
+            }
         }
-        else{
-            alert('Invalid Login details');
-        }
+    });
+        $('#Email').val('');
+        $('#Password').val('');
     }
-});
-    $('#Email').val('');
-    $('#Password').val('');
 });
 
 
@@ -81,15 +100,7 @@ $('#loginBtn').click((e)=>{
        
     // })
 
-    // $('.delete-btn').click((e)=>{
-    //     e.preventDefault();
-    //     alert(e.target.id);
-    //     let id = e.target.id.split("del-").join('')
-    //     alert(id);
-    //     $.ajax({
-    //         url: 'http://localhost:3000/customers/${id}',
-    //         method:'delete',
-    //     }).done((e)=>{
+    // 
 
     //     })
    // })

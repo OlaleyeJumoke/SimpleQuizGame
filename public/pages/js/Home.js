@@ -1,3 +1,5 @@
+//alert('we here');
+
 let name = localStorage.getItem("name");
 $('#th').html(`<h3>${name}</h3>`);
 $.ajax({
@@ -6,37 +8,56 @@ $.ajax({
 }).done((e)=>{
     //console.log(e)
     //alert(e.toString);
+    
    for(let i = 0; i< e.length; i++){
         $('#questions').append(
-            `<div>
-            <div class="Second">
+            `<br><div class="Second">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Options
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <button id = "edt-${e[i].id}" class="dropdown-item edit-btn" type="button">Edit</button>
+                    <button id = "del-${e[i].id}" class="dropdown-item delete-btn" type="button">Delete</button>
+                </div>
+            </div>
             <h1>${e[i].question}</h1>
             <label class="options">
-            <input type="radio" name="${i}">${e[i].firstOption}
+                <input type="radio" name="${i}">${e[i].firstOption}
             </label>
             <label class="options">
-            <input type="radio" name="${i}">${e[i].secondOption}
+                <input type="radio" name="${i}">${e[i].secondOption}
             </label>
             <label class="options">
-            <input type="radio" name="${i}">${e[i].thirdOption}
+                <input type="radio" name="${i}">${e[i].thirdOption}
             </label>
             <label class="options">
-            <input type="radio" name="${i}">${e[i].fourthOption}
+                <input type="radio" name="${i}">${e[i].fourthOption}
             </label>
-            </div>
-            <button class="dropbtn">Dropdown 
-            <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-                <a href="#">Edit</a>
-                <a href="#">Delete</a>
-            </div>
-            </div>
-            <br>`
+        </div>`
         )
    }
+   $('.delete-btn').on('click',(e)=>{
+    //alert(e);
+    //e.preventDefault();
+    
+    let id = e.target.id.split("del-").join('')
+    alert(id);
+    $.ajax({
+        url: `http://localhost:3000/Questions/${id}`,
+        method:'delete',
+    }).done((e)=>{
+        window.location.replace("http://localhost:3000/pages/Home.html")
+    })
    //<button id = "del-${e[i].id}" class = "btn btn-danger delete-btn">Delete</button>
 });
+$('.edit-btn').on('click',(e)=>{ 
+    let id = e.target.id.split("edt-").join('');
+    localStorage.setItem("id",id);
+    window.location.replace("http://localhost:3000/pages/EditQuestion.html")
+});
+});
+
 
 $('#addQuestion').click((e)=>{
     e.preventDefault();
@@ -59,22 +80,30 @@ $('#addQuestion').click((e)=>{
         (e)=>{
         //    for(let i = 0; i< e.length; i++){
                 $('#questions').append(
-                    `<div class="Second">
-                    <h1>${e.question}</h1>
-                    <label class="options">
-                    <input type="radio" name="option">${e.firstOption}
-                    </label>
-                    <label class="options">
-                    <input type="radio" name="option">${e.secondOption}
-                    </label>
-                    <label class="options">
-                    <input type="radio" name="option">${e.thirdOption}
-                    </label>
-                    <label class="options">
-                    <input type="radio" name="option">${e.fourthOption}
-                    </label>
+                    `<br><div class="Second">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Options
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <button id = "del-${e[i].id}" class="dropdown-item edit-btn" type="button">Edit</button>
+                            <button id = "del-${e[i].id}" class="dropdown-item delete-btn" type="button">Delete</button>
+                        </div>
                     </div>
-                    <br>`
+                    <h1>${e[i].question}</h1>
+                    <label class="options">
+                        <input type="radio" name="optn">${e[i].firstOption}
+                    </label>
+                    <label class="options">
+                        <input type="radio" name="optn">${e[i].secondOption}
+                    </label>
+                    <label class="options">
+                        <input type="radio" name="optn">${e[i].thirdOption}
+                    </label>
+                    <label class="options">
+                        <input type="radio" name="optn">${e[i].fourthOption}
+                    </label>
+                </div>`
                 )
            }
        // alert("Success")
