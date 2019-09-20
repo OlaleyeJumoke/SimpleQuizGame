@@ -11,22 +11,13 @@
       "categories": "Power"
     },
     {
-      "question": "Is this for real?",
+      "question": "Is this really for real?",
       "firstOption": "yes",
       "secondOption": "yes",
       "thirdOption": "yest",
       "fourthOption": "nost",
       "correctAnswer": "yest",
       "id": 2
-    },
-    {
-      "question": "",
-      "firstOption": "",
-      "secondOption": "",
-      "thirdOption": "",
-      "fourthOption": "",
-      "correctAnswer": "",
-      "id": 4
     },
     {
       "question": "is this it?, do you really have to do this, at this time?, it is Crazy you have to go through this, but I am thankful. It turned out well. did it?.",

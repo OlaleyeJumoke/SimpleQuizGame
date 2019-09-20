@@ -9,10 +9,14 @@ body{
 .Add{
     margin: 0;
     padding: 0;
-    background: rgb(75, 235, 235);
+    background:  rgb(137, 181, 206);
     background-size: cover;
     background-position: center;
     font-family: sans-serif;
+}
+.btn1{
+    float: right;
+    margin: 10px;
 }
 .header{
     width: 100%;
@@ -68,12 +72,12 @@ input[type="text"], input[type="password"]
     font-size: 16px;
 }
 .input[type="radio"]{
-	border-radius:10px;
+	border-radius:10px; 
 	padding-left:8px;
     background: transparent;
     outline: none;
-    height: 50px;
-    /* text-align: start; */
+    height: 40px;
+    text-align: start;
     color: rgb(8, 8, 8);
     font-size: 16px;
 }
@@ -152,6 +156,10 @@ p{
     /* transform: translate(-50%,-50%);  */
     box-sizing: border-box;
     padding: 30px 20px;
+}
+.Second h1{
+    font-size: 18px;
+    text-align: left;
 }
 .Add_Question{
     width: 100%;

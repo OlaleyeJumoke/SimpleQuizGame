@@ -1,6 +1,8 @@
 //alert('we here');
 
 let name = localStorage.getItem("name");
+let result = {};
+
 $('#th').html(`<h3>${name}</h3>`);
 $.ajax({
     url: 'http://localhost:3000/Questions',
@@ -23,17 +25,18 @@ $.ajax({
             </div>
             <h1>${e[i].question}</h1>
             <label class="options">
-                <input type="radio" name="${i}">${e[i].firstOption}
+                <input type="radio" name="${e[i].id}" value="${e[i].firstOption}" >${e[i].firstOption}
             </label>
             <label class="options">
-                <input type="radio" name="${i}">${e[i].secondOption}
+                <input type="radio" name="${e[i].id}"  value="${e[i].secondOption}">${e[i].secondOption}
             </label>
             <label class="options">
-                <input type="radio" name="${i}">${e[i].thirdOption}
+                <input type="radio" name="${e[i].id}" value="${e[i].thirdOption}">${e[i].thirdOption}
             </label>
             <label class="options">
-                <input type="radio" name="${i}">${e[i].fourthOption}
+                <input type="radio" name="${e[i].id}" value="${e[i].fourthOption}">${e[i].fourthOption}
             </label>
+            <input type="text" id="correct-${e[i].id}" hidden value="${e[i].correctAnswer}"/>
         </div>`
         )
    }
@@ -56,6 +59,39 @@ $('.edit-btn').on('click',(e)=>{
     localStorage.setItem("id",id);
     window.location.replace("http://localhost:3000/pages/EditQuestion.html")
 });
+
+$("input[type = 'radio']").click((e)=>{
+    // check if selected is correct
+    let val = $(`#correct-${e.target.name}`).val();
+    console.log(val);
+    if (val == e.target.value){
+        result[e.target.name] = 1;
+        console.log(result);
+        //finalR++;
+    } 
+    else {
+        result[e.target.name] = 0;
+        console.log(result);
+    
+    }
+    //var value = $("input[name = 'gender']:checked").val();
+   // console.log(finalR);
+})
+});
+$('#submitBtn').click((e)=>{
+    e.preventDefault();
+    let finalR = 0;
+    let u = JSON.stringify(result);
+    const values = Object.values(result);
+    console.log(values);
+    
+    for(let m = 0; m < values.length; m++){
+       if(values[m] == 1){
+           finalR++;
+       }
+    }
+    alert(`Your Score is: ${finalR}`);
+    window.location.reload();
 });
 
 
@@ -92,16 +128,16 @@ $('#addQuestion').click((e)=>{
                     </div>
                     <h1>${e[i].question}</h1>
                     <label class="options">
-                        <input type="radio" name="optn">${e[i].firstOption}
+                        <input type="radio" name="optn" value="${e[i].firstOption}">${e[i].firstOption}
                     </label>
                     <label class="options">
-                        <input type="radio" name="optn">${e[i].secondOption}
+                        <input type="radio" name="optn" value="${e[i].secondOption}">${e[i].secondOption}
                     </label>
                     <label class="options">
-                        <input type="radio" name="optn">${e[i].thirdOption}
+                        <input type="radio" name="optn" value="${e[i].thirdOption}">${e[i].thirdOption}
                     </label>
                     <label class="options">
-                        <input type="radio" name="optn">${e[i].fourthOption}
+                        <input type="radio" name="optn" value="${e[i].fourthOption}">${e[i].fourthOption}
                     </label>
                 </div>`
                 )
