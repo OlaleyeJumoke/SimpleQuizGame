@@ -1,9 +1,14 @@
 //alert('we here');
 
-let name = localStorage.getItem("name");
+
 let result = {};
 
-$('#th').html(`<h3>${name}</h3>`);
+$(document).ready((e)=>{
+    let name = localStorage.getItem("name");
+    if(name.length>0){
+        document.getElementById("th").innerHTML = name + ' ';
+    }
+});//('#th')(`<h3>${name}</h3>`);
 $.ajax({
     url: 'http://localhost:3000/Questions',
     method:'get',
@@ -122,28 +127,28 @@ $('#addQuestion').click((e)=>{
                             Options
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                            <button id = "del-${e[i].id}" class="dropdown-item edit-btn" type="button">Edit</button>
-                            <button id = "del-${e[i].id}" class="dropdown-item delete-btn" type="button">Delete</button>
+                            <button id = "del-${e.id}" class="dropdown-item edit-btn" type="button">Edit</button>
+                            <button id = "del-${e.id}" class="dropdown-item delete-btn" type="button">Delete</button>
                         </div>
                     </div>
-                    <h1>${e[i].question}</h1>
+                    <h1>${e.question}</h1>
                     <label class="options">
-                        <input type="radio" name="optn" value="${e[i].firstOption}">${e[i].firstOption}
+                        <input type="radio" name="optn" value="${e.firstOption}">${e.firstOption}
                     </label>
                     <label class="options">
-                        <input type="radio" name="optn" value="${e[i].secondOption}">${e[i].secondOption}
+                        <input type="radio" name="optn" value="${e.secondOption}">${e.secondOption}
                     </label>
                     <label class="options">
-                        <input type="radio" name="optn" value="${e[i].thirdOption}">${e[i].thirdOption}
+                        <input type="radio" name="optn" value="${e.thirdOption}">${e.thirdOption}
                     </label>
                     <label class="options">
-                        <input type="radio" name="optn" value="${e[i].fourthOption}">${e[i].fourthOption}
+                        <input type="radio" name="optn" value="${e.fourthOption}">${e.fourthOption}
                     </label>
                 </div>`
-                )
-           }
-       // alert("Success")
-    //windows.location.replace("")
+                );
+                window.location.reload();
+           },
+        //alert("Success")
     );
     
     $('#FirstOption').val('');

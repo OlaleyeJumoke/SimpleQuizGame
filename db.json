@@ -1,16 +1,6 @@
 {
   "Questions": [
     {
-      "id": 1,
-      "question": "what happened in Fuoye?",
-      "firstOption": "a",
-      "secondOption": "b",
-      "thirdOption": "c",
-      "fourthOption": "d",
-      "correctAnswer": "b",
-      "categories": "Power"
-    },
-    {
       "question": "Is this really for real?",
       "firstOption": "yes",
       "secondOption": "yes",
@@ -20,13 +10,31 @@
       "id": 2
     },
     {
-      "question": "is this it?, do you really have to do this, at this time?, it is Crazy you have to go through this, but I am thankful. It turned out well. did it?.",
-      "firstOption": "yes",
-      "secondOption": "no",
-      "thirdOption": "nost",
-      "fourthOption": "yest",
-      "correctAnswer": "no",
-      "id": 6
+      "question": "what is JavaScript?",
+      "firstOption": "Java and Script",
+      "secondOption": "Java's Script",
+      "thirdOption": "Scripter",
+      "fourthOption": "spirit",
+      "correctAnswer": "Scripter",
+      "id": 3
+    },
+    {
+      "question": "The World Largest desert is ?",
+      "firstOption": "Thar",
+      "secondOption": "Kalahari",
+      "thirdOption": "Sahara",
+      "fourthOption": "Sonoran",
+      "correctAnswer": "Sahara",
+      "id": 4
+    },
+    {
+      "question": "Country that has the highest in Barley Production ? ",
+      "firstOption": "China",
+      "secondOption": "India",
+      "thirdOption": "Russia",
+      "fourthOption": "France",
+      "correctAnswer": "Russia",
+      "id": 5
     }
   ],
   "Users": [
@@ -57,6 +65,41 @@
       "password": "dolapo",
       "score": "[]",
       "id": 4
+    },
+    {
+      "name": "Jumoke",
+      "email": "jumoke@gmail.com",
+      "password": "jumoke",
+      "score": "[]",
+      "id": 5
+    },
+    {
+      "name": "Jumoke",
+      "email": "jumoke@gmail.com",
+      "password": "jumoke",
+      "score": "[]",
+      "id": 6
+    },
+    {
+      "name": "Jumoke",
+      "email": "jumoke@gmail.com",
+      "password": "jumoke",
+      "score": "[]",
+      "id": 7
+    },
+    {
+      "name": "lola",
+      "email": "lola@gmail.com",
+      "password": "lola",
+      "score": "[]",
+      "id": 8
+    },
+    {
+      "name": "jummy",
+      "email": "jummy@gmail.com",
+      "password": "jummy",
+      "score": "[]",
+      "id": 15
     }
   ]
 }

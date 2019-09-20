@@ -1,5 +1,5 @@
 let id = localStorage.getItem("id");
-alert(id);
+//alert(id);
 $.ajax({
     url: `http://localhost:3000/Questions?id=${id}`,
     method:'get',
@@ -36,7 +36,7 @@ $('#editQuestion').on('click',(e)=>{
             correctAnswer: correctAnswer1,            
         }
     }).done((e)=>{
-        alert("success");
+        //alert("success");
         localStorage.removeItem("id");
         window.location.replace("http://localhost:3000/pages/Home.html");
     })

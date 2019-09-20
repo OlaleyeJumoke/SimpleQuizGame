@@ -81,6 +81,13 @@ input[type="text"], input[type="password"]
     color: rgb(8, 8, 8);
     font-size: 16px;
 }
+.sign{
+    float: right;
+}
+.th1{
+color: #fff;
+float: left;
+}
 .thead th{
    padding: 20px;
 }
